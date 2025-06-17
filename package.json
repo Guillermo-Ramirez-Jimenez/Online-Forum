@@ -1,8 +1,8 @@
 {
-  "name": "online-forum",
+  "name": "Online-Forum",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://guillermo-ramirez-jimenez.github.io/Online-Forum/",
+  "homepage": "https://Guillermo-Ramirez-Jimenez.github.io/Online-Forum/",
   "type": "module",
   "scripts": {
     "predeploy" : "npm run build",
