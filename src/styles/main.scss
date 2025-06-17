@@ -1,0 +1,131 @@
+@use '_colors' as c;
+@use '_fonts' as f;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: c.$black;
+  background-image: url('../../img/hero.png');
+  background-repeat: no-repeat;
+  background-position: top 160px right;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  padding: 37px 264px 0 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .nav {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      a {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        color: c.$gray;
+        position: relative;
+        &:hover {
+          color: c.$white;
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 32px;
+            height: 4px;
+            background-color: c.$pink;
+          }
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  width: 45%;
+  padding: 96px 0 144px 160px;
+  &__title {
+    font-family: 'Merriweather', 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 80px;
+    color: c.$white;
+    padding-bottom: 24px;
+  }
+  &__subtitle {
+    width: 90%;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+    color: c.$gray;
+    padding-bottom: 32px;
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    &-getstarted {
+      display: block;
+      width: 240px;
+      height: 60px;
+      background-color: c.$pink;
+      color: c.$white;
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      text-align: center;
+      align-content: center;
+      border-radius: 20px 20px 20px 0;
+      &:hover {
+        background-color: c.$white;
+        color: c.$pink;
+      }
+    }
+    &-learnmore {
+      display: flex;
+      align-items: center;
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      color: c.$white;
+      text-decoration: underline;
+      &:hover {
+        color: c.$pink;
+      }
+    }
+  }
+}
+
+.features {
+  width: 45%;
+  padding: 0 0 117px 160px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  &__feature {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    &-text {
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      color: c.$white;
+    }
+  }
+}
